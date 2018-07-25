@@ -1,9 +1,9 @@
 declare global {
   interface PluginRegistry {
-    SMSPlugin?: SMSPluginPlugin;
+    SMS?: SMSPlugin;
   }
 }
 
-export interface SMSPluginPlugin {
+export interface SMSPlugin {
   echo(options: { value: string }): Promise<{value: string}>;
 }

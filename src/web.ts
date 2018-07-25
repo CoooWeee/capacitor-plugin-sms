@@ -1,7 +1,7 @@
 import { WebPlugin } from '@capacitor/core';
-import { SMSPluginPlugin } from './definitions';
+import { SMSPlugin } from './definitions';
 
-export class SMSPluginWeb extends WebPlugin implements SMSPluginPlugin {
+export class SMSPluginWeb extends WebPlugin implements SMSPlugin {
   constructor() {
     super({
       name: 'SMSPlugin',
@@ -15,6 +15,6 @@ export class SMSPluginWeb extends WebPlugin implements SMSPluginPlugin {
   }
 }
 
-const SMSPlugin = new SMSPluginWeb();
+const SMSWeb = new SMSPluginWeb();
 
-export { SMSPlugin };
+export { SMSWeb };
