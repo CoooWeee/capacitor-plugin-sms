@@ -20,6 +20,12 @@ export class SMSPluginWeb extends WebPlugin {
             return Promise.resolve({ value: options.value });
         });
     }
+    sendSMS(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log('ECHO', options);
+            return Promise.resolve({ result: { method: 'sendSMS', value: true } });
+        });
+    }
 }
 const SMSWeb = new SMSPluginWeb();
 export { SMSWeb };

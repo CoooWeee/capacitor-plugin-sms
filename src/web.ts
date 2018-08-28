@@ -13,6 +13,11 @@ export class SMSPluginWeb extends WebPlugin implements SMSPlugin {
     console.log('ECHO', options);
     return Promise.resolve({ value: options.value });
   }
+
+  async sendSMS(options: { number: string, message: string }): Promise<{result: { method: string, value: boolean }}> {
+    console.log('ECHO', options);
+    return Promise.resolve({result: { method: 'sendSMS', value: true }});
+  }
 }
 
 const SMSWeb = new SMSPluginWeb();
