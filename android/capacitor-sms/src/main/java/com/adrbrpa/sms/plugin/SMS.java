@@ -9,10 +9,10 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
 @NativePlugin()
-public class SMSPlugin extends Plugin {
+public class SMS extends Plugin {
 
 
-    private static final String TAG = SMSPlugin.class.getSimpleName();
+    private static final String TAG = SMS.class.getSimpleName();
     String mobileNumber = "0123456789";
     String message = "Message";
 
