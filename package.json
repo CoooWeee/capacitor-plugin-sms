@@ -1,6 +1,6 @@
 {
   "name": "capacitor-sms",
-  "version": "0.0.1-alpha.1-4",
+  "version": "0.0.1-alpha.1-9",
   "description": "SMS Plugin",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
