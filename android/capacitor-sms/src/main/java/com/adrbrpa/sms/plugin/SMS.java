@@ -1,7 +1,11 @@
 package com.adrbrpa.sms.plugin;
 
+import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 import android.util.Log;
 
@@ -20,6 +24,7 @@ public class SMS extends Plugin {
     private static final String TAG = SMS.class.getSimpleName();
     String mobileNumber = "0123456789";
     String message = "Message";
+    private static final int SEND_SMS_CODE = 23;
 
     @PluginMethod()
     public void echo(PluginCall call) {
@@ -60,6 +65,51 @@ public class SMS extends Plugin {
             sms.sendTextMessage(number, null, msg, sentIntent, deliveredIntent);
         }
 
+    }
+
+    private boolean isSendSmsAllowed() {
+        int result = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.SEND_SMS);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void permissionCheck(){
+        if (isSendSmsAllowed()) {
+            Log.d("Permission", "permission allowed to SEND_SMS");
+            sendSms();
+            return;
+        }
+
+        requestSmsSendPermission();
+    }
+
+    private void sendSms() {
+        /*
+        SmsManager sms = SmsManager.getDefault();
+        ArrayList<String> parts = sms.divideMessage("MESSAGE");
+        sms.sendMultipartTextMessage("670380247", null, parts, null,
+                null);
+                */
+        Log.d("sendSms", "sendSms");
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage("670380247", null, "Test message", null, null);
+    }
+
+    //Requesting permission
+    private void requestSmsSendPermission() {
+
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.SEND_SMS)) {
+            //If the user has denied the permission previously your code will come to this block
+            //Here you can explain why you need this permission
+            //Explain here why you need this permission
+        }
+
+        //And finally ask for the permission
+        ActivityCompat.requestPermissions(getActivity(), new String[] { Manifest.permission.SEND_SMS },
+                SEND_SMS_CODE);
     }
 
 }
