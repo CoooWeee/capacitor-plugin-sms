@@ -44,13 +44,8 @@ public class SMS extends Plugin {
         String number = call.getString("number");
         String message = call.getString("message");
 
-        /*
-        JSObject ret = new JSObject();
-        ret.put("method", "sendSMS");
-        ret.put("value", true);
-        call.success(ret);
-        */
 
+        /*
         SmsManager sms = SmsManager.getDefault();
         List<String> messages = sms.divideMessage(message);
 
@@ -63,7 +58,15 @@ public class SMS extends Plugin {
             PendingIntent deliveredIntent =PendingIntent.getBroadcast(getActivity(), 0,new  Intent("SMS_DELIVERED"), 0);
 
             sms.sendTextMessage(number, null, msg, sentIntent, deliveredIntent);
+
+            JSObject ret = new JSObject();
+            ret.put("method", "sendSMS");
+            ret.put("value", true);
+            call.success(ret);
         }
+        */
+
+        this.permissionCheck();
 
     }
 
