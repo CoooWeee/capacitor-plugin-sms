@@ -41,8 +41,10 @@ public class SMS extends Plugin {
 
         Log.e(TAG, "[SMS Plugin Native Android]: sendSMS called.");
 
-        String number = call.getString("number");
-        String message = call.getString("message");
+        this.mobileNumber = call.getString("number");
+        this.message = call.getString("message");
+
+
 
 
         /*
@@ -98,7 +100,7 @@ public class SMS extends Plugin {
                 */
         Log.d("sendSms", "sendSms");
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage("670380247", null, "Test message", null, null);
+        smsManager.sendTextMessage(this.mobileNumber, null, this.message, null, null);
     }
 
     //Requesting permission
