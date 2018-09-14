@@ -9,6 +9,14 @@ export interface SMSPlugin {
     }): Promise<{
         value: string;
     }>;
+    configEndpoint(options: {
+        endpoint: string;
+    }): Promise<{
+        result: {
+            method: string;
+            value: boolean;
+        };
+    }>;
     sendSMS(options: {
         number: string;
         message: string;
