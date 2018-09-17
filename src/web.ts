@@ -3,6 +3,7 @@ import { SMSPlugin } from './definitions';
 
 export class SMSPluginWeb extends WebPlugin implements SMSPlugin {
 
+  platform: string;
   endpoint: string;
 
   constructor() {
@@ -18,9 +19,10 @@ export class SMSPluginWeb extends WebPlugin implements SMSPlugin {
     return Promise.resolve({ value: options.value });
   }
 
-  async configEndpoint(options: { endpoint: string}): Promise<{result: { method: string, value: boolean }}> {
+  async configEndpoint(options: { platform: string, endpoint: string}): Promise<{result: { method: string, value: boolean }}> {
     console.log('SMSPluginWeb::config | method called');
     this.endpoint = options.endpoint;
+    this.platform = options.platform;
     return Promise.resolve({result: { method: 'config', value: true }});
   }
 
@@ -32,7 +34,7 @@ export class SMSPluginWeb extends WebPlugin implements SMSPlugin {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({number: options.number, text: options.message})
+      body: JSON.stringify({platform: this.platform, number: options.number, text: options.message})
     })
     .then(function(res) {
       console.log('res', res);

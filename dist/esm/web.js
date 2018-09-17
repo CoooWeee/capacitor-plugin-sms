@@ -25,6 +25,7 @@ export class SMSPluginWeb extends WebPlugin {
         return __awaiter(this, void 0, void 0, function* () {
             console.log('SMSPluginWeb::config | method called');
             this.endpoint = options.endpoint;
+            this.platform = options.platform;
             return Promise.resolve({ result: { method: 'config', value: true } });
         });
     }
@@ -36,7 +37,7 @@ export class SMSPluginWeb extends WebPlugin {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ number: options.number, text: options.message })
+                body: JSON.stringify({ platform: this.platform, number: options.number, text: options.message })
             })
                 .then(function (res) {
                 console.log('res', res);
