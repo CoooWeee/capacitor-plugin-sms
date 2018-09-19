@@ -5,8 +5,8 @@ import Capacitor
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
  */
-@objc(SMSPlugin)
-public class SMSPlugin: CAPPlugin {
+@objc(SMS)
+public class SMS: CAPPlugin {
     
     @objc func echo(_ call: CAPPluginCall) {
         print("[SMS Plugin Native iOS]: echo");
@@ -18,9 +18,12 @@ public class SMSPlugin: CAPPlugin {
     
     @objc func sendSMS(_ call: CAPPluginCall) {
         print("[SMS Plugin Native iOS]: sendSMS");
-        let value = call.getString("value") ?? ""
+
+        let number = call.getString("number") ?? ""
+        let message = call.getString("message") ?? ""
         call.success([
-            "value": value
+            "number": number,
+            "message": message
         ])
     }
    
