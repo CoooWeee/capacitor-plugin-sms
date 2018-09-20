@@ -8,7 +8,7 @@ import Capacitor
 @objc(SMS)
 public class SMS: CAPPlugin {
     
-    var ssc = SMSSendViewController!
+    var ssc = SMSSendViewController()
     
     @objc func echo(_ call: CAPPluginCall) {
         print("[SMS Plugin Native iOS]: SMS::echo");
@@ -21,8 +21,8 @@ public class SMS: CAPPlugin {
     @objc func sendSMS(_ call: CAPPluginCall) {
         print("[SMS Plugin Native iOS]: SMS::sendSMS");
 
-        let number = call.getString("number") ?? ""
-        let message = call.getString("message") ?? ""
+        let number = call.getString("number") ?? nil
+        let message = call.getString("message") ?? nil
         
         /*
         call.success([
@@ -31,10 +31,21 @@ public class SMS: CAPPlugin {
         ])
          */
         
-        self.bridge.viewController.present(self.ssc!, animated: true, completion: {
-            call.success([
-                "value": "[SMS Plugin Native iOS]: SMS::sendSMS OK"
-                ])
-        });
+        let options = [
+            "number" : call.getString("number") ?? nil,
+            "message" : call.getString("message") ?? nil,
+            ] as [String : Any]
+        
+        self.ssc.options = options;
+
+         DispatchQueue.main.async {
+            // Update UI
+            self.bridge.viewController.present(self.ssc, animated: true, completion: {
+                call.success([
+                    "value": "[SMS Plugin Native iOS]: SMS::sendSMS OK"
+                    ])
+            });
+        }
+        
     }
 }
