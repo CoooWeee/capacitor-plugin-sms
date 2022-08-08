@@ -1,23 +1,23 @@
 declare global {
     interface PluginRegistry {
-        SMS?: SMSPlugin;
+        SMS?: SmsPlugin;
     }
 }
-export interface SMSPlugin {
+export interface SmsPlugin {
     echo(options: {
         value: string;
     }): Promise<{
         value: string;
     }>;
     configEndpoint(options: {
-        endpoint: string;
+        endpoint: RequestInfo | URL;
     }): Promise<{
         result: {
             method: string;
             value: boolean;
         };
     }>;
-    sendSMS(options: {
+    sendSms(options: {
         number: string;
         message: string;
     }): Promise<{

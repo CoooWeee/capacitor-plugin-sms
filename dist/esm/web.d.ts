@@ -1,8 +1,8 @@
 import { WebPlugin } from '@capacitor/core';
-import { SMSPlugin } from './definitions';
-export declare class SMSPluginWeb extends WebPlugin implements SMSPlugin {
-    platform: string;
-    endpoint: string;
+import { SmsPlugin } from './definitions';
+export declare class SmsPluginWeb extends WebPlugin implements SmsPlugin {
+    platform: string | null;
+    endpoint: RequestInfo | URL | null;
     constructor();
     echo(options: {
         value: string;
@@ -11,14 +11,14 @@ export declare class SMSPluginWeb extends WebPlugin implements SMSPlugin {
     }>;
     configEndpoint(options: {
         platform: string;
-        endpoint: string;
+        endpoint: RequestInfo | URL;
     }): Promise<{
         result: {
             method: string;
             value: boolean;
         };
     }>;
-    sendSMS(options: {
+    sendSms(options: {
         number: string;
         message: string;
     }): Promise<{
@@ -28,5 +28,5 @@ export declare class SMSPluginWeb extends WebPlugin implements SMSPlugin {
         };
     }>;
 }
-declare const SMSWeb: SMSPluginWeb;
-export { SMSWeb };
+declare const SmsWeb: SmsPluginWeb;
+export { SmsWeb };

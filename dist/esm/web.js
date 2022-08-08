@@ -1,53 +1,44 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { WebPlugin } from '@capacitor/core';
-export class SMSPluginWeb extends WebPlugin {
+export class SmsPluginWeb extends WebPlugin {
     constructor() {
         super({
-            name: 'SMSPlugin',
+            name: 'SmsPlugin',
             platforms: ['web']
         });
+        this.platform = null;
+        this.endpoint = null;
     }
-    echo(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log('SMSPluginWeb::echo | method called');
-            console.log('ECHO', options);
-            return Promise.resolve({ value: options.value });
-        });
+    async echo(options) {
+        console.log('SmsPluginWeb::echo | method called');
+        console.log('ECHO', options);
+        return Promise.resolve({ value: options.value });
     }
-    configEndpoint(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log('SMSPluginWeb::config | method called');
-            this.endpoint = options.endpoint;
-            this.platform = options.platform;
-            return Promise.resolve({ result: { method: 'config', value: true } });
-        });
+    async configEndpoint(options) {
+        console.log('SmsPluginWeb::config | method called');
+        this.endpoint = options.endpoint;
+        this.platform = options.platform;
+        return Promise.resolve({ result: { method: 'config', value: true } });
     }
-    sendSMS(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log('SMSPluginWeb::sendSMS | method called', options);
-            fetch(this.endpoint, {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ platform: this.platform, number: options.number, text: options.message })
-            })
-                .then(function (res) {
-                console.log('res', res);
-                return Promise.resolve({ result: { method: 'sendSMS', value: true } });
-            })
-                .catch(function (error) { console.log(error); });
-            return Promise.resolve({ result: { method: 'sendSMS', value: false } });
-        });
+    async sendSms(options) {
+        console.log('SmsPluginWeb::sendSms | method called', options);
+        if (this.endpoint == null) {
+            throw new Error('endpoint not set');
+        }
+        fetch(this.endpoint, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ platform: this.platform, number: options.number, text: options.message })
+        })
+            .then(function (res) {
+            console.log('res', res);
+            return Promise.resolve({ result: { method: 'sendSms', value: true } });
+        })
+            .catch(function (error) { console.log(error); });
+        return Promise.resolve({ result: { method: 'sendSms', value: false } });
     }
 }
-const SMSWeb = new SMSPluginWeb();
-export { SMSWeb };
+const SmsWeb = new SmsPluginWeb();
+export { SmsWeb };
 //# sourceMappingURL=web.js.map

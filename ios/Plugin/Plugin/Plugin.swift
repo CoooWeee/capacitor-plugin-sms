@@ -18,8 +18,8 @@ public class SMS: CAPPlugin {
         ])
     }
     
-    @objc func sendSMS(_ call: CAPPluginCall) {
-        print("[SMS Plugin Native iOS]: SMS::sendSMS");
+    @objc func sendSms(_ call: CAPPluginCall) {
+        print("[SMS Plugin Native iOS]: SMS::sendSms");
 
         let number = call.getString("number") ?? nil
         let message = call.getString("message") ?? nil
@@ -42,7 +42,7 @@ public class SMS: CAPPlugin {
             // Update UI
             self.bridge.viewController.present(self.ssc, animated: true, completion: {
                 call.success([
-                    "value": "[SMS Plugin Native iOS]: SMS::sendSMS OK"
+                    "value": "[SMS Plugin Native iOS]: SMS::sendSms OK"
                     ])
             });
         }

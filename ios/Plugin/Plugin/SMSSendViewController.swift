@@ -19,7 +19,7 @@ public class SMSSendViewController: UIViewController, MFMessageComposeViewContro
         
         print("[SMS Plugin Native iOS]: SMSSendViewController::viewDidLoad");
 
-        sendSMSText()
+        sendSmsText()
         
     }
     
@@ -40,8 +40,8 @@ public class SMSSendViewController: UIViewController, MFMessageComposeViewContro
       
     }
     
-    public func sendSMSText() {
-        print("[SMS Plugin Native iOS]: SMSSendViewController::sendSMSText")
+    public func sendSmsText() {
+        print("[SMS Plugin Native iOS]: SMSSendViewController::sendSmsText")
         
         if JSONSerialization.isValidJSONObject(self.options) {
             print("[SMS Plugin Native iOS]: JSONSerialization.isValidJSONObject");
@@ -63,7 +63,7 @@ public class SMSSendViewController: UIViewController, MFMessageComposeViewContro
                     
                 }
                 else {
-                    print("[SMS Plugin Native iOS]: SMSSendViewController::sendSMSText -> SMS services are not available.")
+                    print("[SMS Plugin Native iOS]: SMSSendViewController::sendSmsText -> SMS services are not available.")
                 }
             }
         }
