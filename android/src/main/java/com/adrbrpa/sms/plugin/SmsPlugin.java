@@ -14,7 +14,7 @@ import com.getcapacitor.annotation.Permission;
 import com.getcapacitor.annotation.PermissionCallback;
 
 
-@CapacitorPlugin(name = "SmsPlugin", permissions = {
+@CapacitorPlugin(name = "Sms", permissions = {
         @Permission(alias = SmsPlugin.PERMISSIONS, strings = {Manifest.permission.SEND_SMS}),
 })
 public class SmsPlugin extends Plugin {
@@ -47,19 +47,28 @@ public class SmsPlugin extends Plugin {
 
     @PluginMethod()
     public void sendSms(PluginCall call) {
-        Log.e(TAG, "[SMS Plugin Android]: sendSms called.");
+        JSObject result = new JSObject();
 
-        if (!isSmsPermissionGranted()) {
-            requestAllPermissions(call, "permissionCallback");
-            return;
+        try {
+            Log.e(TAG, "[SMS Plugin Android]: sendSms called.");
+
+            if (!isSmsPermissionGranted()) {
+                requestAllPermissions(call, "permissionCallback");
+                return;
+            }
+
+            Log.d("sendSms", "sendSms");
+
+            var mobileNumber = call.getString("number");
+            var message = call.getString("message");
+
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(mobileNumber, null, message, null, null);
+
+            result.put("success", true);
+        } catch (SecurityException e) {
+            // expected
+            result.put("success", false);
         }
-
-        Log.d("sendSms", "sendSms");
-
-        var mobileNumber = call.getString("number");
-        var message = call.getString("message");
-
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(mobileNumber, null, message, null, null);
     }
 }

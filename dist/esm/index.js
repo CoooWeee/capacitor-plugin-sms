@@ -1,7 +1,7 @@
 import { registerPlugin } from '@capacitor/core';
-const SMS = registerPlugin('SMS', {
-    web: () => import('./web').then(m => new m.SmsPluginWeb()),
+const Sms = registerPlugin('Sms', {
+    web: () => import('./web').then(m => new m.SmsWeb()),
 });
 export * from './definitions';
-export { SMS };
+export { Sms };
 //# sourceMappingURL=index.js.map

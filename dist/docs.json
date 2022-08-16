@@ -6,43 +6,8 @@
     "tags": [],
     "methods": [
       {
-        "name": "echo",
-        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
-        "parameters": [
-          {
-            "name": "options",
-            "docs": "",
-            "type": "{ value: string; }"
-          }
-        ],
-        "returns": "Promise<{ value: string; }>",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [],
-        "slug": "echo"
-      },
-      {
-        "name": "configEndpoint",
-        "signature": "(options: { endpoint: RequestInfo | URL; }) => Promise<{ result: { method: string; value: boolean; }; }>",
-        "parameters": [
-          {
-            "name": "options",
-            "docs": "",
-            "type": "{ endpoint: any; }"
-          }
-        ],
-        "returns": "Promise<{ result: { method: string; value: boolean; }; }>",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "RequestInfo",
-          "URL"
-        ],
-        "slug": "configendpoint"
-      },
-      {
         "name": "sendSms",
-        "signature": "(options: { number: string; message: string; }) => Promise<{ result: { method: string; value: boolean; }; }>",
+        "signature": "(options: { number: string; message: string; }) => Promise<{ result: { success: boolean; }; }>",
         "parameters": [
           {
             "name": "options",
@@ -50,7 +15,7 @@
             "type": "{ number: string; message: string; }"
           }
         ],
-        "returns": "Promise<{ result: { method: string; value: boolean; }; }>",
+        "returns": "Promise<{ result: { success: boolean; }; }>",
         "tags": [],
         "docs": "",
         "complexTypes": [],

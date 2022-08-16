@@ -1,4 +1,4 @@
 import type { SmsPlugin } from './definitions';
-declare const SMS: SmsPlugin;
+declare const Sms: SmsPlugin;
 export * from './definitions';
-export { SMS };
+export { Sms };

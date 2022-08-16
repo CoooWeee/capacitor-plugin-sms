@@ -1,11 +1,11 @@
 var capacitorSms = (function (exports, core) {
     'use strict';
 
-    const SMS = core.registerPlugin('SMS', {
-        web: () => Promise.resolve().then(function () { return web; }).then(m => new m.SmsPluginWeb()),
+    const Sms = core.registerPlugin('Sms', {
+        web: () => Promise.resolve().then(function () { return web; }).then(m => new m.SmsWeb()),
     });
 
-    class SmsPluginWeb extends core.WebPlugin {
+    class SmsWeb extends core.WebPlugin {
         constructor() {
             super({
                 name: 'SmsPlugin',
@@ -14,46 +14,18 @@ var capacitorSms = (function (exports, core) {
             this.platform = null;
             this.endpoint = null;
         }
-        async echo(options) {
-            console.log('SmsPluginWeb::echo | method called');
-            console.log('ECHO', options);
-            return Promise.resolve({ value: options.value });
-        }
-        async configEndpoint(options) {
-            console.log('SmsPluginWeb::config | method called');
-            this.endpoint = options.endpoint;
-            this.platform = options.platform;
-            return Promise.resolve({ result: { method: 'config', value: true } });
-        }
         async sendSms(options) {
             console.log('SmsPluginWeb::sendSms | method called', options);
-            if (this.endpoint == null) {
-                throw new Error('endpoint not set');
-            }
-            fetch(this.endpoint, {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ platform: this.platform, number: options.number, text: options.message })
-            })
-                .then(function (res) {
-                console.log('res', res);
-                return Promise.resolve({ result: { method: 'sendSms', value: true } });
-            })
-                .catch(function (error) { console.log(error); });
-            return Promise.resolve({ result: { method: 'sendSms', value: false } });
+            return Promise.resolve({ result: { success: false } });
         }
     }
-    const SmsWeb = new SmsPluginWeb();
 
     var web = /*#__PURE__*/Object.freeze({
         __proto__: null,
-        SmsPluginWeb: SmsPluginWeb,
         SmsWeb: SmsWeb
     });
 
-    exports.SMS = SMS;
+    exports.Sms = Sms;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
