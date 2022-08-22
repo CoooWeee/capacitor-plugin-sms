@@ -23,15 +23,15 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@capacitor/android@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-4.0.1.tgz#95f81f5bdb1a1895fc3cabc791d1d36e5e943bb2"
-  integrity sha512-JXToVdVYe4icOcPG8GOIiRoGSu3zQcZW965o2HUxWC0vQF3Xh0/ntbNL/J1Vf7HODyUkiRnozvzDzn6nWoVQEQ==
+"@capacitor/android@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-4.1.0.tgz#d4f4a84213b948911757a00a58255418f126f2c7"
+  integrity sha512-aYHvpYVlS6WC+bG9jJfwqgHMxTw3e8f3taNnl/y9qCjglmMmtFcZWFAVLlOleVK4Q7olSirqjx37f0ppvxRTLg==
 
-"@capacitor/cli@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-4.0.1.tgz#b5f91cc1c375e05d9a912c1c076a7afd2f6021c4"
-  integrity sha512-fRb8npef6g8rdNg82NV4P6GfKbH+ifHpDJSIr3WqqSuPqWKGR2wVD81XueTS45xccU0moJuT/FQwiuXZ7K66Cg==
+"@capacitor/cli@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-4.1.0.tgz#90e3bddba2e508dbe1ad6d7be242ae95be8b870e"
+  integrity sha512-SkMtohfjZS0tJdCtoqugHQIYJ4DowjXk4yQzDFXN3MnhjAKEQmB7QcZY5R8o9NoPMx0ngw2Bzm00e7RdyERvzg==
   dependencies:
     "@ionic/cli-framework-output" "^2.2.5"
     "@ionic/utils-fs" "^3.1.6"
@@ -51,10 +51,10 @@
     tslib "^2.4.0"
     xml2js "^0.4.23"
 
-"@capacitor/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-4.0.1.tgz#6ebf091694b9bde106f2359c881b410f938300e5"
-  integrity sha512-gita0j7UPoGyHejAUsrW1OrkyDSp7gfHn45fkeQclHRSz7UWLF4hqE1R/6INsVmIFu/amIApxfHed8h3m/Fm7g==
+"@capacitor/core@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-4.1.0.tgz#4f5b80cd9cbf65bfc5a203082399fa794ffc5f45"
+  integrity sha512-bMYFnC5l5n11D/kLTz9TOOJfUH+nQqYRwzG7h5h4AXIm8aFxH5ZY3iFlDZd7R4xcyrlnfxzfoooSH9trPjRBLA==
   dependencies:
     tslib "^2.1.0"
 
@@ -69,10 +69,10 @@
     minimist "^1.2.5"
     typescript "~4.2.4"
 
-"@capacitor/ios@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-4.0.1.tgz#f148cfca542936e50d941f810e52462176268cb7"
-  integrity sha512-46qigDiPKHXxihSSjXDIbuF8/1O9xWVgMzJpEFJhhhav+vHy6/SDc2liKLhmqCwH2OzZGxk+IlSGlkc4Oyorkw==
+"@capacitor/ios@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-4.1.0.tgz#db3ca463611dccda03244ca4dac41d3b6f69e79c"
+  integrity sha512-zkv48Xc5QwdL7TIT4YpXwgISrA5Cuy59KyN+uq3ovr+L/y5SgtKAOg7pATRBYT7CFgFLqkey/PQKcTjbcxhyaA==
 
 "@eslint/eslintrc@^1.3.0":
   version "1.3.0"
@@ -1797,10 +1797,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.78.0:
-  version "2.78.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.78.0.tgz#00995deae70c0f712ea79ad904d5f6b033209d9e"
-  integrity sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==
+rollup@^2.78.1:
+  version "2.78.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.78.1.tgz#52fe3934d9c83cb4f7c4cb5fb75d88591be8648f"
+  integrity sha512-VeeCgtGi4P+o9hIg+xz4qQpRl6R401LWEXBmxYKOV4zlF82lyhgh2hTZnheFUbANE8l2A41F458iwj2vEYaXJg==
   optionalDependencies:
     fsevents "~2.3.2"
 
