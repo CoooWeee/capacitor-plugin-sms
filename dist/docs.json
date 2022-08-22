@@ -7,7 +7,7 @@
     "methods": [
       {
         "name": "sendSms",
-        "signature": "(options: { number: string; message: string; }) => Promise<{ result: { success: boolean; }; }>",
+        "signature": "(options: { number: string; message: string; }) => Promise<void>",
         "parameters": [
           {
             "name": "options",
@@ -15,7 +15,7 @@
             "type": "{ number: string; message: string; }"
           }
         ],
-        "returns": "Promise<{ result: { success: boolean; }; }>",
+        "returns": "Promise<void>",
         "tags": [],
         "docs": "",
         "complexTypes": [],

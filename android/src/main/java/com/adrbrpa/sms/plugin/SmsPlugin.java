@@ -47,8 +47,6 @@ public class SmsPlugin extends Plugin {
 
     @PluginMethod()
     public void sendSms(PluginCall call) {
-        JSObject result = new JSObject();
-
         try {
             Log.e(TAG, "[SMS Plugin Android]: sendSms called.");
 
@@ -57,18 +55,27 @@ public class SmsPlugin extends Plugin {
                 return;
             }
 
-            Log.d("sendSms", "sendSms");
+            Log.d(TAG, "sendSms");
 
             var mobileNumber = call.getString("number");
             var message = call.getString("message");
 
+            if(mobileNumber.length() < 5) {
+                throw new Error("invalid sms number");
+            }
+
+            if(message.length() < 1) {
+                throw new Error("invalid sms message");
+            }
+
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(mobileNumber, null, message, null, null);
 
-            result.put("success", true);
+            call.resolve();
         } catch (SecurityException e) {
+            Log.e(TAG, "sendSms: " + e.getMessage());
             // expected
-            result.put("success", false);
+            call.reject("could not send sms", e);
         }
     }
 }

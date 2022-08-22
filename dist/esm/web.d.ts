@@ -7,9 +7,5 @@ export declare class SmsWeb extends WebPlugin implements SmsPlugin {
     sendSms(options: {
         number: string;
         message: string;
-    }): Promise<{
-        result: {
-            success: boolean;
-        };
-    }>;
+    }): Promise<void>;
 }

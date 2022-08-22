@@ -19,7 +19,7 @@ class SmsWeb extends core.WebPlugin {
     }
     async sendSms(options) {
         console.log('SmsPluginWeb::sendSms | method called', options);
-        return Promise.resolve({ result: { success: false } });
+        return Promise.reject("not implemented");
     }
 }
 

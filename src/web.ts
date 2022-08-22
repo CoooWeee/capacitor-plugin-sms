@@ -15,10 +15,10 @@ export class SmsWeb extends WebPlugin implements SmsPlugin {
 
 
 
-  async sendSms(options: { number: string, message: string }): Promise<{ result: { success: boolean } }> {
+  async sendSms(options: { number: string, message: string }): Promise<void> {
     console.log('SmsPluginWeb::sendSms | method called', options);
 
-    return Promise.resolve({ result: { success: false } });
+    return Promise.reject("not implemented");
   }
 }
 

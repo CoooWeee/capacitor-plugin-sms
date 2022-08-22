@@ -23,14 +23,12 @@ npx cap sync
 ### sendSms(...)
 
 ```typescript
-sendSms(options: { number: string; message: string; }) => Promise<{ result: { success: boolean; }; }>
+sendSms(options: { number: string; message: string; }) => Promise<void>
 ```
 
 | Param         | Type                                              |
 | ------------- | ------------------------------------------------- |
 | **`options`** | <code>{ number: string; message: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ result: { success: boolean; }; }&gt;</code>
 
 --------------------
 

@@ -1,5 +1,5 @@
 
 
 export interface SmsPlugin {
-  sendSms(options: { number: string, message: string }): Promise<{result: { success: boolean }}>;
+  sendSms(options: { number: string, message: string }): Promise<void>;
 }

@@ -16,7 +16,7 @@ var capacitorSms = (function (exports, core) {
         }
         async sendSms(options) {
             console.log('SmsPluginWeb::sendSms | method called', options);
-            return Promise.resolve({ result: { success: false } });
+            return Promise.reject("not implemented");
         }
     }
 
