@@ -60,12 +60,16 @@ public class SmsPlugin extends Plugin {
             var mobileNumber = call.getString("number");
             var message = call.getString("message");
 
-            if(mobileNumber.length() < 5) {
+            if (mobileNumber.length() < 5) {
                 throw new Error("invalid sms number");
             }
 
-            if(message.length() < 1) {
+            if (message.length() < 1) {
                 throw new Error("invalid sms message");
+            }
+
+            if (message.length() > 160) {
+                throw new Error("sms message too long");
             }
 
             SmsManager smsManager = SmsManager.getDefault();
