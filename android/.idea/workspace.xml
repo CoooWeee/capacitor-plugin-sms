@@ -5,25 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80354898-2afc-48f8-90fc-a6d6368e1bac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.." beforeDir="false" afterPath="$PROJECT_DIR$/.." afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adrbrpa/sms/plugin/SmsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adrbrpa/sms/plugin/SmsPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/docs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/esm/definitions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/esm/definitions.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/esm/web.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/esm/web.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/esm/web.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/esm/web.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/esm/web.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/esm/web.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/plugin.cjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/plugin.cjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/plugin.cjs.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/plugin.cjs.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/plugin.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/plugin.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/definitions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/definitions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/web.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/web.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/directives/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/directives/single-click.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/directives/single-click.directive.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/page-not-found/page-not-found.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/page-not-found/page-not-found.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/page-not-found/page-not-found.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/page-not-found/page-not-found.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/page-not-found/page-not-found.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/remote/remote.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/remote/remote.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/remote/remote.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/settings/settings.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/settings/settings.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/settings/settings.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/status/status.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/status/status.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/status/status.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pages/tabs/tabs.router.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pages/tabs/tabs.router.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pipes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pipes/locale-date.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pipes/locale-date.pipe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/pipes/sanitize-html.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/pipes/sanitize-html.pipe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/app/shell/aspect-ratio/aspect-ratio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../src/app/shell/aspect-ratio/aspect-ratio.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
