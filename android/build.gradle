@@ -13,13 +13,14 @@ buildscript {
       mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath 'com.android.tools.build:gradle:8.1.1'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
+    namespace "com.adrbrpa.sms.plugin.capacitorsms"
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 32
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 27
